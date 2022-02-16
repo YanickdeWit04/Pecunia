@@ -1,7 +1,28 @@
+@font-face {
+    font-family: avenir-bold;
+    src: url(../fonts/avenir-bold.otf);
+}
+@font-face {
+    font-family: avenir-light;
+    src: url(../fonts/avenir-lt.otf);
+}
+@font-face {
+    font-family: avenir-regular;
+    src: url(../fonts/avenir-regular.otf);
+}
 body{
-    background-color: aqua;
+    background-color:;
 }
 .header{
     display: flex;
+    justify-content: space-between;
+    font-family: avenir-bold;
+}
+.linker-helft{
+    display: flex;
     justify-content: flex-start;
+}
+.rechter-helft{
+    display: flex;
+    justify-content: flex-end;
 }
