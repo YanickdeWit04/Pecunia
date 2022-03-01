@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Monolog\Handler\PushoverHandler;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ Route::post("/logout",[App\Http\Controllers\LogoutController::class,"store"])->n
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 
 
