@@ -17,6 +17,12 @@ use Monolog\Handler\PushoverHandler;
 Route::get('/home', function () {
     return view('home');
 });
+Route::get('/account', function () {
+    return view('account-nl');
+});
+Route::get('/instellingen', function () {
+    return view('settings-nl');
+});
 Route::post("/logout",[App\Http\Controllers\LogoutController::class,"store"])->name("logout");
 Auth::routes();
 

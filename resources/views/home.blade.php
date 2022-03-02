@@ -19,10 +19,9 @@
         <div class="display">
             <div class="dropdown">
                 <button class="dropbtn">Welkom {{ auth()->user()->name }}</button>
-                <span class="material-icons">expand_more</span>
                 <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
+                    <a class="dropdown-menu-links" href="/account">account</a>
+                    <a href="/instellingen">instellingen</a>
                     <form action="{{ route('logout') }}" method="post">
                         @csrf
                         <button class="logout-button logout-button-primary" type="submit">uitloggen</button>
