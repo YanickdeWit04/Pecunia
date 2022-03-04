@@ -127,3 +127,10 @@ body{
     display: flex;
     justify-content: center;
 }
+table, th, td{
+    border: 2px solid;
+    border-color: #3498DB;
+}
+.main-div{
+    margin-top: 20px;
+}

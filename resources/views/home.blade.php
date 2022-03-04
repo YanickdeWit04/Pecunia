@@ -30,6 +30,57 @@
             </div>
         </div>
     </div>
+
+    <div class="main-div">
+        <div class="graphics-main-div">
+            <div class="graphics">
+
+            </div>
+            <div class="legenda-main">
+                <div>
+                    <table class="legenda-">
+                        <thead>
+                            <tr>
+                                <th>hoeveelheid</th>
+                                <th>rekening naam</th>
+                                <th>catogorie</th>
+                                <th>datum</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>test</td>
+                                <td>test2</td>
+                                <td>test3</td>
+                                <td>test4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="bank-statements-div">
+            <table class="bank-statements">
+                <thead>
+                    <tr>
+                        <th>hoeveelheid</th>
+                        <th>rekening naam</th>
+                        <th>catogorie</th>
+                        <th>datum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>test</td>
+                        <td>test2</td>
+                        <td>test3</td>
+                        <td>test4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 
 </html>
