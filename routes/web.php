@@ -13,7 +13,6 @@ use Monolog\Handler\PushoverHandler;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/home', function () {
     return view('home');
 });
@@ -27,7 +26,3 @@ Route::post("/logout",[App\Http\Controllers\LogoutController::class,"store"])->n
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-
-
