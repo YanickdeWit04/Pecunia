@@ -80,7 +80,7 @@ body {
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  background-color: #cbcbd2;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -7488,6 +7488,8 @@ textarea.form-control-lg {
 .py-4 {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important;
+  background-color:  #cbcbd2;
+
 }
 
 .py-5 {
@@ -11286,3 +11288,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+. sewo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
