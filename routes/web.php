@@ -22,6 +22,9 @@ Route::get('/account', function () {
 Route::get('/instellingen', function () {
     return view('settings-nl');
 });
+Route::get('/spaardoelen', function () {
+    return view('savings');
+});
 Route::post("/logout",[App\Http\Controllers\LogoutController::class,"store"])->name("logout");
 Auth::routes();
 
