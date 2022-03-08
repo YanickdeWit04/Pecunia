@@ -8,6 +8,8 @@
     <title>Home</title>
     <link rel="stylesheet" href="/css/home.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/donutchart1.js"></script>
 </head>
 
 <body>
@@ -31,56 +33,33 @@
         </div>
     </div>
 
-    <div class="main-div">
-        <div class="graphics-main-div">
+
             <div class="graphics">
-
+                <div id="donutchart" style="width: 50%; height:300px"></div>
+                <div id="donutchart2" style="width: 50%; height:300px"></div>
             </div>
-            <div class="legenda-main">
-                <div>
-                    <table class="legenda-">
-                        <thead>
-                            <tr>
-                                <th>hoeveelheid</th>
-                                <th>rekening naam</th>
-                                <th>catogorie</th>
-                                <th>datum</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>test</td>
-                                <td>test2</td>
-                                <td>test3</td>
-                                <td>test4</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+
+            <div class="bank-statements-div">
+                <table class="bank-statements">
+                    <thead>
+                        <tr>
+                            <th>hoeveelheid</th>
+                            <th>rekening naam</th>
+                            <th>catogorie</th>
+                            <th>datum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>test</td>
+                            <td>test2</td>
+                            <td>test3</td>
+                            <td>test4</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-
-        <div class="bank-statements-div">
-            <table class="bank-statements">
-                <thead>
-                    <tr>
-                        <th>hoeveelheid</th>
-                        <th>rekening naam</th>
-                        <th>catogorie</th>
-                        <th>datum</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>test</td>
-                        <td>test2</td>
-                        <td>test3</td>
-                        <td>test4</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
 </body>
 
 </html>
