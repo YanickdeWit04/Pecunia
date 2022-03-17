@@ -6,17 +6,16 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login or Sign up</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
 
 @extends('layouts.app')
+<div class="sewo">
+    <img src="/images/beng.svg"  width="450px" height="450px">
+</div>
 
 @section('content')
-
- <div class="sewo">
-     <img src="/images/beng.svg" alt="Logo" width="450px" height="450px">
-
-    </div>
 
 
     <link rel="stylesheet" href="login.css">
@@ -89,8 +88,7 @@
         </div>
     </div>
 </div>
-    <div> class=grauw
-    <p>brahw</p></div>
+
 @endsection
 </body>
     </html>
