@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="navbar">
+    {{-- <div class="navbar">
         <div class="linker-helft">
             <a href="/"><img src="/images/beng.svg" alt="Logo" width="50px" height="50px"></a>
             <h2 style="margin-top: 10px">home</h2>
@@ -59,7 +59,17 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+        </div> --}}
+<div class="navbar-main">
+    <div class="navbar-logo">
+        <img src="../images/pecunia.png" alt="Pecunia Logo" class="pecunia-logo">
+        <div class=""></div>
+    </div>
+
+    <div class="navbar-remains">
+
+    </div>
+</div>
 </body>
 
 </html>

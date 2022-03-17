@@ -138,3 +138,10 @@ table, th, td{
     display: flex;
     justify-content: flex-start;
 }
+
+/* Test stuk voor de website */
+.pecunia-logo{
+    height: 85px;
+    width: 140px;
+    border-radius: 21px;
+}
