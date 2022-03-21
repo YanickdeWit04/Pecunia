@@ -15,7 +15,11 @@ class CreateSavegoalsTable extends Migration
     {
         Schema::create('savegoals', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name');
+            $table->string('icon');
+            $table->decimal('amount');
+            $table->dateTime('date');
+            $table->foreignId('users_id');
         });
     }
 
