@@ -17,7 +17,7 @@ class CreateCategoriesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('icon');
-            $table->foreignId('users_id')
+            $table->foreignId('users_id');
         });
     }
 
