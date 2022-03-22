@@ -25,7 +25,7 @@ class BankstatementController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**

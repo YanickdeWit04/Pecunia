@@ -15,7 +15,7 @@ class CreateBankstatementsTable extends Migration
     {
         Schema::create('bankstatements', function (Blueprint $table) {
             $table->id();
-            $table->decimal('amount');
+            $table->double('amount');
             $table->string('name');
             $table->boolean('type');
             $table->dateTime('date');
