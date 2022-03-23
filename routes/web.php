@@ -29,6 +29,8 @@ Route::get('/add', function () {
     return view('addstatement');
 });
 Route::post("/logout",[App\Http\Controllers\LogoutController::class,"store"])->name("logout");
-Auth::routes();
+Route::post("/add1",[App\Http\Controllers\BankstatementController::class,"create"]);
+
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();

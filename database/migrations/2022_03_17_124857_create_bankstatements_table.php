@@ -20,6 +20,7 @@ class CreateBankstatementsTable extends Migration
             $table->boolean('type');
             $table->dateTime('date');
             $table->foreignId('categories_id');
+            $table->timestamps();
         });
     }
 

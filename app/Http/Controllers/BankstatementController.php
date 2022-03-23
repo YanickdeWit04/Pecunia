@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Bankstatement;
 use App\Http\Requests\StoreBankstatementRequest;
 use App\Http\Requests\UpdateBankstatementRequest;
+use Illuminate\Http\Request;
 
 class BankstatementController extends Controller
 {
@@ -23,8 +24,16 @@ class BankstatementController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        $amount = $request->amount;
+        $name = $request->name;
+        $category = (int)$request->category;
+        $type = (boolean)$request->type_of_statement;
+        $date = $request->date;
+        $data = ['amount'=>$amount, 'name'=>$name, 'categories_id'=>$category, 'type'=>$type,'date'=>$date];
+        Bankstatement::create($data);
+        echo "Transactie opgeslagen!";
 
     }
 

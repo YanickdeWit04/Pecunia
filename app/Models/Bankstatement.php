@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Bankstatement extends Model
 {
     use HasFactory;
+    protected $fillable = ['amount', 'name', 'categories_id', 'type', 'date'];
 }

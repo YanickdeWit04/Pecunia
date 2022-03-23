@@ -10,14 +10,15 @@
 </head>
 <body>
     <div class="main">
-    <form class="add-funds" action="BankstatementController.php">
+    <form class="add-funds" action="/add1" method="POST">
         @csrf
-        <input type="number" placeholder="amount">
-        <input type="text" placeholder="name">
-        <input type="text" placeholder="category">
-        <p>check if expense<input type="checkbox"></p>
+        <input type="number" placeholder="amount" name="amount">
+        <input type="text" placeholder="name" name="name">
+        <input type="number" placeholder="category" name="category">
+        <input type="date" placeholder="date" name="date">
+        <p>check if expense<input type="checkbox" name="type_of_statement"></p>
         <input type="submit">
+    </form>
     </div>
-</form>
 </body>
 </html>
