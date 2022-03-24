@@ -15,6 +15,9 @@
         <input type="number" placeholder="amount" name="amount">
         <input type="text" placeholder="name" name="name">
         <input type="number" placeholder="category" name="category">
+        @foreach(auth()->user()->categories as $category)
+            {{$category->name}}
+        @endforeach
         <input type="date" placeholder="date" name="date">
         <p>check if expense<input type="checkbox" name="type_of_statement"></p>
         <input type="submit">

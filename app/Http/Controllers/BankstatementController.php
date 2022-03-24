@@ -6,6 +6,8 @@ use App\Models\Bankstatement;
 use App\Http\Requests\StoreBankstatementRequest;
 use App\Http\Requests\UpdateBankstatementRequest;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Database\Eloquent\Model;
 
 class BankstatementController extends Controller
 {
@@ -22,7 +24,7 @@ class BankstatementController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|Response
      */
     public function create(Request $request)
     {
@@ -35,6 +37,10 @@ class BankstatementController extends Controller
         Bankstatement::create($data);
         echo "Transactie opgeslagen!";
 
+        $category_check = Bankstatement::all();
+        foreach ($category_check as $category) {
+            echo $category->amount . $category->category->name;
+        }
     }
 
     /**
