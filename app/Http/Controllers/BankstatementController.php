@@ -30,17 +30,13 @@ class BankstatementController extends Controller
     {
         $amount = $request->amount;
         $name = $request->name;
-        $category = (int)$request->category;
+
+        $category_id = (int)$request->category;
         $type = (boolean)$request->type_of_statement;
         $date = $request->date;
-        $data = ['amount'=>$amount, 'name'=>$name, 'categories_id'=>$category, 'type'=>$type,'date'=>$date];
+        $data = ['amount'=>$amount, 'name'=>$name, 'category_id'=>$category_id, 'type'=>$type,'date'=>$date];
         Bankstatement::create($data);
         echo "Transactie opgeslagen!";
-
-        $category_check = Bankstatement::all();
-        foreach ($category_check as $category) {
-            echo $category->amount . $category->category->name;
-        }
     }
 
     /**

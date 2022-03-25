@@ -14,10 +14,11 @@
         @csrf
         <input type="number" placeholder="amount" name="amount">
         <input type="text" placeholder="name" name="name">
-        <input type="number" placeholder="category" name="category">
+        <select type="string" name="category">
         @foreach(auth()->user()->categories as $category)
-            {{$category->name}}
+            <option value="{{$category->id}}">{{$category->name}}</option>
         @endforeach
+        </select>
         <input type="date" placeholder="date" name="date">
         <p>check if expense<input type="checkbox" name="type_of_statement"></p>
         <input type="submit">
