@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Savegoal;
 use App\Http\Requests\StoreSavegoalRequest;
 use App\Http\Requests\UpdateSavegoalRequest;
+use http\Env\Request;
 
 class SavegoalController extends Controller
 {
@@ -31,12 +32,14 @@ class SavegoalController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreSavegoalRequest  $request
+     * @param  Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreSavegoalRequest $request)
+    public function store(Request $request)
     {
         //
+        auth()->user()->savegoals()->create($request->all());
+
     }
 
     /**
