@@ -1,0 +1,16 @@
+@font-face {
+    font-family: avenir-regular;
+    src: url(../fonts/avenir-regular.otf);
+}
+body{
+    font-family: avenir-regular;
+}
+.main{
+    display: flex;
+    justify-content: center;
+}
+.add-category{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
