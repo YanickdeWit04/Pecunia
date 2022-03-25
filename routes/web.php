@@ -28,8 +28,12 @@ Route::get('/spaardoelen', function () {
 Route::get('/add', function () {
     return view('addstatement');
 });
+Route::get('/addcategory', function () {
+    return view('addcategory');
+});
 Route::post("/logout",[App\Http\Controllers\LogoutController::class,"store"])->name("logout");
 Route::post("/add1",[App\Http\Controllers\BankstatementController::class,"create"]);
+Route::post("/add2",[App\Http\Controllers\CategoryController::class,"create"]);
 
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

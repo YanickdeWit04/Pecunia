@@ -2,9 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bankstatement;
 use App\Models\Category;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
+use Illuminate\Http\Response;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
+use Illuminate\Auth\SessionGuard;
+use Illuminate\Support\Facades\Auth;
 
 class CategoryController extends Controller
 {
@@ -23,9 +29,15 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $name = $request->name;
+        $icon = $request->name;
+        $user = Auth::user()->id;
+        $data = ['name'=>$name, 'icon'=>$icon, 'user_id'=>$user];
+        Category::create($data);
+        echo "Categorie gemaakt!";
+
     }
 
     /**
