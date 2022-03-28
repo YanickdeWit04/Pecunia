@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="main">
-    <form class="add-funds" action="/add1" method="POST">
+    <form class="add-funds" action="{{route('bankstatement.store')}}" method="POST">
         @csrf
         <input type="number" placeholder="amount" name="amount">
         <input type="text" placeholder="name" name="name">

@@ -31,13 +31,7 @@ class CategoryController extends Controller
      */
     public function create(Request $request)
     {
-        $name = $request->name;
-        $icon = $request->name;
-        $user = Auth::user()->id;
-        $data = ['name'=>$name, 'icon'=>$icon, 'user_id'=>$user];
-        Category::create($data);
-        echo "Categorie gemaakt!";
-
+        return view('addcategory');
     }
 
     /**
@@ -48,7 +42,12 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request)
     {
-        //
+        $name = $request->name;
+        $icon = $request->name;
+        $user = Auth::user()->id;
+        $data = ['name'=>$name, 'icon'=>$icon, 'user_id'=>$user];
+        Category::create($data);
+        echo "Categorie gemaakt!";
     }
 
     /**

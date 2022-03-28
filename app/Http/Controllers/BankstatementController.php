@@ -28,15 +28,7 @@ class BankstatementController extends Controller
      */
     public function create(Request $request)
     {
-        $amount = $request->amount;
-        $name = $request->name;
-
-        $category_id = (int)$request->category;
-        $type = (boolean)$request->type_of_statement;
-        $date = $request->date;
-        $data = ['amount'=>$amount, 'name'=>$name, 'category_id'=>$category_id, 'type'=>$type,'date'=>$date];
-        Bankstatement::create($data);
-        echo "Transactie opgeslagen!";
+        return view('addstatement');
     }
 
     /**
@@ -47,7 +39,15 @@ class BankstatementController extends Controller
      */
     public function store(StoreBankstatementRequest $request)
     {
-        //
+        $amount = $request->amount;
+        $name = $request->name;
+
+        $category_id = (int)$request->category;
+        $type = (boolean)$request->type_of_statement;
+        $date = $request->date;
+        $data = ['amount'=>$amount, 'name'=>$name, 'category_id'=>$category_id, 'type'=>$type,'date'=>$date];
+        Bankstatement::create($data);
+        echo "Transactie opgeslagen!";
     }
 
     /**

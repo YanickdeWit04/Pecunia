@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="main">
-    <form class="add-category" action="/add2" method="POST">
+    <form class="add-category" action="{{route('category.store')}}" method="POST">
         @csrf
         <input type="text" name="name" placeholder="name">
         <input type="text" name="icon" placeholder="icon">

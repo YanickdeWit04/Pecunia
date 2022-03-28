@@ -17,19 +17,9 @@ use Monolog\Handler\PushoverHandler;
 Route::get('/spaardoelen', function () {
     return view('savings');
 });
-Route::get('/add', function () {
-    return view('addstatement');
-});
-Route::get('/addcategory', function () {
-    return view('addcategory');
-});
-Route::post("/logout",[App\Http\Controllers\LogoutController::class,"store"])->name("logout");
-Route::post("/add1",[App\Http\Controllers\BankstatementController::class,"create"]);
-Route::post("/add2",[App\Http\Controllers\CategoryController::class,"create"]);
-
-Route::resource('/home', HomeBladeController::class);
 Route::resource('/account', \App\Http\Controllers\AccountBladeController::class);
 Route::resource('/instellingen', \App\Http\Controllers\SettingsBladeController::class);
-
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('bankstatement', \App\Http\Controllers\BankstatementController::class);
+Route::resource('category', \App\Http\Controllers\CategoryController::class);
+Route::resource('/', \App\Http\Controllers\HomeController::class);
 Auth::routes();
