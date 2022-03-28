@@ -9,21 +9,19 @@
     <link rel="stylesheet" href="spaar.css">
 </head>
 <header>
-    <div class="sewo">
-        <img src="/images/beng.svg" width="350px" height="350px">
+    <div class="logo">
+        <img class="logo" src="images/beng.svg"alt="logo" height="400px" width="400px">
     </div>
 </header>
 <body>
-<div class="keuzes">
-    <h1> Saving goals menu </h1>
+<div class="menu">
+    <h1>Spaar doelen menu </h1>
 </div>
-
-<div class="Saving form">
+<div class="spaaren">
     <form>
         <label for="Voor">Spaaren voor:</label>
         <input type="text" id="fname" name="fname" value=""><br><br>
-        <label for="streven">Streven voor:</label>
-        <input type="text" id="fname" name="fname" value=""><br><br>
+        <label for="streven">Streefbedrag:<input type="number"></label><br><br>
         <form action="https://example.com">
             <label>
                 Start om spaardoelen te bereiken:
@@ -39,10 +37,14 @@
                 <input type="radio" id="javascript" name="fav_language" value="JavaScript">
                 <label for="Rekening 3">Rekening 3</label><br><br>
                 <label for="Submit">Deposit reminder</label>
-                <input type="checkbox" id="submit" name="submit" value="submit"><br><br><br>
-                <input type="submit" value="Toevoegen">
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><br><br>
             </form>
-</div>
+        </form>
+    </form>
+    <div class="submit">
+    <button class="button button1">Submit</button>
+    </div>
 
+    <div
 </body>
 </html>
