@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeBladeController;
 use Illuminate\Support\Facades\Route;
 use Monolog\Handler\PushoverHandler;
 
@@ -13,15 +14,6 @@ use Monolog\Handler\PushoverHandler;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/home', function () {
-    return view('home');
-});
-Route::get('/account', function () {
-    return view('account-nl');
-});
-Route::get('/instellingen', function () {
-    return view('settings-nl');
-});
 Route::get('/spaardoelen', function () {
     return view('savings');
 });
@@ -35,6 +27,9 @@ Route::post("/logout",[App\Http\Controllers\LogoutController::class,"store"])->n
 Route::post("/add1",[App\Http\Controllers\BankstatementController::class,"create"]);
 Route::post("/add2",[App\Http\Controllers\CategoryController::class,"create"]);
 
+Route::resource('/home', HomeBladeController::class);
+Route::resource('/account', \App\Http\Controllers\AccountBladeController::class);
+Route::resource('/instellingen', \App\Http\Controllers\SettingsBladeController::class);
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
