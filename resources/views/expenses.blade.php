@@ -16,7 +16,10 @@
             <td>Datum</td>
             <td>Hoeveelheid</td>
         </tr>
-        @foreach($transacties as $transactie)
+        @foreach($transacties as $i => $transactie)
+            @if($i === 100)
+                @break(1)
+            @endif
             <tr>
             <td>{{$transactie->category->name}}</td>
             <td>{{$transactie->name}}</td>
@@ -32,3 +35,4 @@
 </div>
 </body>
 </html>
+{{--in de if moet ik 100 veranderen naar een variable en met een knop die variable kunnen aanpassen--}}
