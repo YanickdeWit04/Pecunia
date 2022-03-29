@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Bankstatement extends Model
 {
     use HasFactory;
-    protected $fillable = ['amount', 'name', 'category_id', 'type', 'date'];
+    protected $fillable = ['amount', 'name', 'category_id', 'type', 'date', 'user_id'];
 
     public static function select(string $string)
     {
@@ -16,4 +16,8 @@ class Bankstatement extends Model
     public function category(){
         return $this->hasOne(Category::class, 'id', 'category_id');
     }
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+    public $incrementing = false;
 }

@@ -47,4 +47,7 @@ class User extends Authenticatable
     public function categories(){
         return $this->hasMany(Category::class);
     }
+    public function bankstatements(){
+        return $this->hasMany(Bankstatement::class);
+    }
 }

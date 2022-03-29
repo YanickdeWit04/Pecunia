@@ -8,6 +8,8 @@ use App\Http\Requests\UpdateBankstatementRequest;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class BankstatementController extends Controller
 {
@@ -18,7 +20,25 @@ class BankstatementController extends Controller
      */
     public function index()
     {
-        //
+        $transacties = DB::table('Bankstatements')->get();
+        $user_id = Auth::user()->id;
+
+        foreach ($transacties as $transactie)
+        {
+            if ($transactie->user_id == $user_id){
+                echo($transactie->id);
+                echo ' - ';
+                echo($transactie->name);
+                echo ' - ';
+                echo($transactie->amount);
+                echo ' - ';
+                echo($transactie->type);
+                echo ' - ';
+                echo($transactie->date);
+                echo '<br>';
+            };
+        };
+        return view('expenses');
     }
 
     /**
@@ -41,11 +61,11 @@ class BankstatementController extends Controller
     {
         $amount = $request->amount;
         $name = $request->name;
-
+        $user = Auth::user()->id;
         $category_id = (int)$request->category;
         $type = (boolean)$request->type_of_statement;
         $date = $request->date;
-        $data = ['amount'=>$amount, 'name'=>$name, 'category_id'=>$category_id, 'type'=>$type,'date'=>$date];
+        $data = ['amount'=>$amount, 'name'=>$name, 'category_id'=>$category_id, 'type'=>$type,'date'=>$date,'user_id'=>$user];
         Bankstatement::create($data);
         echo "Transactie opgeslagen!";
     }
