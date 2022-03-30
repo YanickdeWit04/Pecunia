@@ -2,18 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Response;
 
 class HomeBladeController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|
      */
     public function index()
     {
-        return view('home');
+        $transacties = Auth::user()->BankStatements;
+        return view('home')->with(['transacties'=>$transacties]);
     }
 
     /**

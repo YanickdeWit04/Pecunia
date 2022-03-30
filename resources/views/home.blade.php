@@ -32,34 +32,32 @@
             </div>
         </div>
     </div>
-
-
             <div class="graphics">
                 <div id="donutchart" style="width: 50%; height:300px"></div>
                 <div id="donutchart2" style="width: 50%; height:300px"></div>
             </div>
-
-            <div class="bank-statements-div">
-                <table class="bank-statements">
-                    <thead>
-                        <tr>
-                            <th>hoeveelheid</th>
-                            <th>rekening naam</th>
-                            <th>catogorie</th>
-                            <th>datum</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>test</td>
-                            <td>test2</td>
-                            <td>test3</td>
-                            <td>test4</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+     <div>
+         <table>
+             <tr>
+                 <td>Categorie</td>
+                 <td>Rekening Naam</td>
+                 <td>Datum</td>
+                 <td>Hoeveelheid</td>
+             </tr>
+             @foreach($transacties->take(25) as $transactie)
+                 <tr>
+                     <td>{{$transactie->category->name}}</td>
+                     <td>{{$transactie->name}}</td>
+                     <td>{{$transactie->date}}</td>
+                     @if($transactie->type == 0)
+                         <td style="color:green">+{{$transactie->amount}}</td>
+                     @else
+                         <td style="color:red">-{{$transactie->amount}}</td>
+                     @endif
+                 </tr>
+             @endforeach
+         </table>
+    </div>
 <div class="navbar-main">
     <div class="navbar-logo">
         <img src="../images/pecunia.png" alt="Pecunia Logo" class="pecunia-logo">
