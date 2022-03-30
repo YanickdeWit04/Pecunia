@@ -18,10 +18,14 @@ class BankstatementController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+       $amount = $request->amount;
+       if (!$amount) {
+           $amount = 100;
+       }
         $transacties = Auth::user()->BankStatements;
-        return view('expenses')->with(['transacties'=>$transacties]);
+        return view('expenses')->with(['transacties'=>$transacties, 'amount'=>$amount]);
     }
 
     /**
