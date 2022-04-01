@@ -11,7 +11,10 @@ google.charts.setOnLoadCallback(drawChart);
     ], true);
 
     var options = {
-      legend:'none'
+      legend:'none',
+      bar: {groupWidth: '10'},
+      candlestick: {risingColor: {fill: '#0ECB81', stroke: '#0ECB81'},
+                    hollowisRising: 'true'}
     };
 
     var chart = new google.visualization.CandlestickChart(document.getElementById('chart_div'));

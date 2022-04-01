@@ -32,6 +32,9 @@ body {
 .pecunia-logo {
     width: 89px;
     height: 50px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
 }
 .avatar{
     height: 50px;
@@ -153,11 +156,20 @@ a{
     background-color: white;
 }
 
-#donutchart{
+.test{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: solid white;
     -webkit-border-radius: 45px;
     -moz-border-radius: 45px;
     border-radius: 45px;
     width: 300px;
+    height: 420px;
     background-color: white;
+    margin-top: 25px
+}
+#donutchart{
+    width: 280px;
+    height: 380px;
 }

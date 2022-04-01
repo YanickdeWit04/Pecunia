@@ -56,7 +56,9 @@
                 @endif
             </div>
             <div class="expense-chart">
-
+                <div class="test">
+                    <div id="donutchart" style=""></div>
+                </div>
             </div>
         </div>
 
