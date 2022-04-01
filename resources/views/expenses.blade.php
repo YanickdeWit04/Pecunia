@@ -9,7 +9,7 @@
 </head>
 <body>
 <div>
-    <a href="/bankstatement/1">
+    <a href="/bankstatement/?amount=1">
         <button type="submit" name="amount" value="1">1</button></a>
     <a href="/bankstatement/5">
         <button type="submit" name="amount" value="5">5</button></a>
@@ -35,10 +35,10 @@
             <td>{{$transactie->category->name}}</td>
             <td>{{$transactie->name}}</td>
             <td>{{$transactie->date}}</td>
-            @if($transactie->type == 0)
+            @if($transactie->amount > 0)
             <td style="color:green">+{{$transactie->amount}}</td>
                 @else
-                    <td style="color:red">-{{$transactie->amount}}</td>
+                    <td style="color:red">{{$transactie->amount}}</td>
             @endif
             </tr>
         @endforeach

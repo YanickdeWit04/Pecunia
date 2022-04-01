@@ -2,22 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\;
+use App\Models\Bankstatement;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Response;
+use App\Http\Requests\StoreBankstatementRequest;
+use App\Http\Requests\UpdateBankstatementRequest;
 
 class HomeBladeController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|
+     * @return
      */
     public function index()
     {
         $transacties = Auth::user()->BankStatements;
-        return view('home')->with(['transacties'=>$transacties]);
+        $sum = 0;
+        echo $sum;
+        return view('home')->with(['transacties'=>$transacties, 'sum'=>$sum]);
     }
 
     /**

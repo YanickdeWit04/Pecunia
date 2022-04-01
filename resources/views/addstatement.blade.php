@@ -10,18 +10,18 @@
 </head>
 <body>
     <div class="main">
-    <form class="add-funds" action="{{route('bankstatement.store')}}" method="POST">
+    <form class="add-funds" action="/bankstatement" method="POST">
         @csrf
         <input type="number" placeholder="amount" name="amount">
         <input type="text" placeholder="name" name="name">
         <select type="string" name="category">
-        @foreach(auth()->user()->categories as $category)
+        @foreach(Auth::user()->categories as $category)
             <option value="{{$category->id}}">{{$category->name}}</option>
         @endforeach
         </select>
         <input type="date" placeholder="date" name="date">
-        <p>check if expense<input type="checkbox" name="type_of_statement"></p>
         <input type="submit">
+
     </form>
     </div>
 </body>

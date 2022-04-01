@@ -24,8 +24,12 @@ class BankstatementController extends Controller
        if (!$amount) {
            $amount = 100;
        }
-        $transacties = Auth::user()->BankStatements;
-        return view('expenses')->with(['transacties'=>$transacties, 'amount'=>$amount]);
+       $transacties = Auth::user()->BankStatements;
+       $sum = Bankstatement::sum('amount');
+       echo $sum;
+
+
+       return view('expenses')->with(['transacties'=>$transacties, 'amount'=>$amount]);
     }
 
     /**

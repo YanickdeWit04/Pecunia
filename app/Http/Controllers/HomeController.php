@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bankstatement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,6 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $transacties = Auth::user()->BankStatements;
-        return view('home')->with(['transacties'=>$transacties]);
+        $sum = Bankstatement::sum('amount');
+        return view('home')->with(['transacties'=>$transacties, 'sum'=>$sum]);
     }
 }
