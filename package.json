@@ -21,5 +21,9 @@
         "sass-loader": "^11.0.1",
         "vue": "^2.6.12",
         "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "@chartisan/chartjs": "^2.1.0",
+        "chart.js": "^2.9.3"
     }
 }

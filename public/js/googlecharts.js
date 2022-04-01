@@ -19,12 +19,12 @@ google.charts.load("current", {packages:["corechart"]});
         ]);
 
         var options = {
-          title: 'Inkomsten',
+          title: 'Uitgaven per categorie',
           pieHole: 0.4,
-          legend: {position: 'right'}
+          legend: 'none',
         };
         var options2 = {
-          title: 'Uitgaven',
+          title: 'niks',
           pieHole: 0.4,
           legend: {position: 'right'}
         };

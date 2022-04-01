@@ -18,27 +18,18 @@ class BankstatementController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $transacties = DB::table('Bankstatements')->get();
-        $user_id = Auth::user()->id;
+       $amount = $request->amount;
+       if (!$amount) {
+           $amount = 100;
+       }
+       $transacties = Auth::user()->BankStatements;
+       $sum = Bankstatement::sum('amount');
+       echo $sum;
 
-        foreach ($transacties as $transactie)
-        {
-            if ($transactie->user_id == $user_id){
-                echo($transactie->id);
-                echo ' - ';
-                echo($transactie->name);
-                echo ' - ';
-                echo($transactie->amount);
-                echo ' - ';
-                echo($transactie->type);
-                echo ' - ';
-                echo($transactie->date);
-                echo '<br>';
-            };
-        };
-        return view('expenses');
+
+       return view('expenses')->with(['transacties'=>$transacties, 'amount'=>$amount]);
     }
 
     /**
