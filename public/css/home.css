@@ -128,3 +128,24 @@ a{
     text-decoration: none;
     color: black;
 }
+.main-content-container{
+    display: flex;
+}
+.left-container{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.right-container{
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+}
+.total-amount{
+    border: solid;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    border-radius: 45px;
+    width: 300px;
+    height: 150px;
+}

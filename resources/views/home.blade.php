@@ -48,8 +48,8 @@
     <div class="main-content-container">
         <div class="left-container">
             <div class="total-amount">
-                <h1>Totaal bedrag</h1>
-                <h2>€ {{ $sum }}</h2>}
+                <h1 style="display: flex; justify">Totaal bedrag</h1>
+                <h2>€ {{ $sum }}</h2>
             </div>
             <div class="expense-chart">
                 <div id="donutchart" style="width: 25%; height:400px"></div>
