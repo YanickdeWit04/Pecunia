@@ -21,7 +21,7 @@ google.charts.load("current", {packages:["corechart"]});
         var options = {
           title: 'Uitgaven per categorie',
           pieHole: 0.4,
-          legend: 'none'
+          legend: 'none',
         };
         var options2 = {
           title: 'niks',

@@ -130,22 +130,34 @@ a{
 }
 .main-content-container{
     display: flex;
+    margin-top: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 .left-container{
     display: flex;
-    flex: 1;
     flex-direction: column;
+    width: 338px;
 }
 .right-container{
     display: flex;
-    flex: 2;
     flex-direction: column;
 }
 .total-amount{
-    border: solid;
+    border: solid white;
     -webkit-border-radius: 45px;
     -moz-border-radius: 45px;
     border-radius: 45px;
     width: 300px;
     height: 150px;
+    background-color: white;
+}
+
+#donutchart{
+    border: solid white;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    border-radius: 45px;
+    width: 300px;
+    background-color: white;
 }
