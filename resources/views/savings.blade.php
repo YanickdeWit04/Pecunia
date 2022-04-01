@@ -10,7 +10,7 @@
 </head>
 <header>
     <div class="logo">
-        <img class="logo" src="images/beng.svg"alt="logo" height="400px" width="400px">
+        <img class="logo" src="images/beng.svg" alt="logo" height="400px" width="400px">
     </div>
 </header>
 <body>
@@ -18,33 +18,35 @@
     <h1>Spaar doelen menu </h1>
 </div>
 <div class="spaaren">
-    <form>
+    <div class="container">
         <label for="Voor">Spaaren voor:</label>
         <input type="text" id="fname" name="fname" value=""><br><br>
         <label for="streven">Streefbedrag:<input type="number"></label><br><br>
-        <form action="https://example.com">
+
+        <div class action="spaardoelen" method="get">
+            Name
             <label>
                 Start om spaardoelen te bereiken:
                 <input type="date" name="bday">
             </label><br><br>
             <label for="Begin">Startbedrag:<input type="number"></label><br><br>
             <label for="start">Spaar rekening:</label>
-            <form>
-                <input type="radio" id="html" name="fav_language" value="HTML">
-                <label for="Rekening 1">Rekening 1</label>
-                <input type="radio" id="Rekening 1" name="fav_language" value="CSS">
-                <label for="Rekening 2">Rekening 2</label>
-                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-                <label for="Rekening 3">Rekening 3</label><br><br>
-                <label for="Submit">Deposit reminder</label>
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><br><br>
-            </form>
-        </form>
-    </form>
-    <div class="submit">
-    <button class="button button1">Submit</button>
-    </div>
 
-    <div
+            <form action="{{route("spaardoelen.store")}}" method="POST" >
+                @csrf
+                <label for="Rekening 1">Rekening 1</label>
+                <input type="radio" id="html" name="Rekening1" value="HTML">
+                <label for="Rekening 2">Rekening 2</label>
+                <input type="radio" id="javascript" name="Rekening2" value="JavaScript">
+                <label for="Rekening 3">Rekening 3</label>
+                <input type="radio" id="html" name="Rekening3" value="HTML">
+                <br> <br><label for="choice">Deposit reminder</label>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><br><br>
+                <label for="submit">Submit</label>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    </div>
 </body>
 </html>

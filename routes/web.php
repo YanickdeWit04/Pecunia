@@ -23,3 +23,4 @@ Route::resource('bankstatement', \App\Http\Controllers\BankstatementController::
 Route::resource('category', \App\Http\Controllers\CategoryController::class);
 Route::resource('/', \App\Http\Controllers\HomeController::class);
 Auth::routes();
+Route::resource('spaardoelen', \App\Http\Controllers\SpaardoelenController::class);
