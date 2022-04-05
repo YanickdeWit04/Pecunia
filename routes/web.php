@@ -14,9 +14,7 @@ use Monolog\Handler\PushoverHandler;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/spaardoelen', function () {
-    return view('savings');
-});
+Route::resource('/spaardoelen', \App\Http\Controllers\SavegoalController::class)->middleware("auth");
 Route::resource('/account', \App\Http\Controllers\AccountBladeController::class);
 Route::resource('/instellingen', \App\Http\Controllers\SettingsBladeController::class);
 Route::resource('bankstatement', \App\Http\Controllers\BankstatementController::class, ['except' => 'index']);

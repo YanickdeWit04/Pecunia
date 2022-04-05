@@ -20,6 +20,7 @@ class CreateSavegoalsTable extends Migration
             $table->decimal('amount');
             $table->dateTime('date');
             $table->foreignId('users_id');
+            $table->timestamps();
         });
     }
 
