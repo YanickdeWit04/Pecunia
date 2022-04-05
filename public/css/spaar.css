@@ -1,11 +1,9 @@
-
 body {
     background-color: rgba(6, 6, 218, 0);
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #ebf1ff;
-
 }
 .keuzes {
     background-color: #cbcbd2;
@@ -49,6 +47,7 @@ body {
     display: flex;
     background-color: white;
     max-height: 60px;
+    font-size:20px;
 }
 #linker {
     display: flex;
@@ -76,6 +75,7 @@ body {
     flex: 1;
     justify-content: flex-end;
     margin-right: 5px;
+    border-radius: 25px;
 }
 #knoppen {
     display: flex;
@@ -84,13 +84,14 @@ body {
     align-items: center;
 }
 .dropbtn {
-    background-color: #3498db;
+    background-color: #0a53be;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
     min-width: 160px;
+    border-radius: 25px;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -185,24 +186,18 @@ a{
     width: 300px;
     height: 150px;
     background-color: white;
-}
 
-.test{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid white;
-    -webkit-border-radius: 45px;
-    -moz-border-radius: 45px;
-    border-radius: 45px;
-    width: 300px;
-    height: 420px;
-    background-color: white;
-    margin-top: 25px
 }
 #donutchart{
     width: 280px;
     height: 380px;
 }
+.sbtn {
+    display: flex;
+    font-size: 20px;
+    background-color:blue;
+}
+
+
 
 

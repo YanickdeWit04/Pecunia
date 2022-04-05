@@ -20,11 +20,13 @@
     </div>
     <div id="rechter">
         <div id="knoppen">
+            <b>
             <a style="margin: 25px" href="/">Home</a>
             <a style="margin: 25px" href="/bankstatement">Transacties</a>
             <a style="margin: 25px" href="/category">Categorieën</a>
             <a style="margin: 25px" href="/spaardoelen">Spaardoelen</a>
             <a style="margin: 25px" href="/graphs">Grafieken</a>
+            </b>
         </div>
         <div id="rechter-rechter">
             <div class="display">
