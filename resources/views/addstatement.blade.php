@@ -21,7 +21,6 @@
         </select>
         <input type="date" placeholder="date" name="date">
         <input type="submit">
-
     </form>
     </div>
 </body>

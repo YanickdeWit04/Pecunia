@@ -19,8 +19,9 @@
             <a href="/"><img class="pecunia-logo" src="images/pecunia.png" alt=""></a>
         </div>
         <div id="rechter">
+            <hr id="line">
             <div id="knoppen">
-                <a style="margin: 25px" href="/">Home</a>
+                <a style="margin: 25px" href="/" id="home-button">Home<div></div></Home></a>
                 <a style="margin: 25px" href="/bankstatement">Transacties</a>
                 <a style="margin: 25px" href="/category">Categorieën</a>
                 <a style="margin: 25px" href="/spaardoelen">Spaardoelen</a>
@@ -42,7 +43,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
     <div class="main-content-container">
@@ -64,7 +64,19 @@
 
         <div class="right-container">
             <div class="total-amount-candlestickchart">
-                <div id="chart_div" style="width: 900px; height: 500px;"></div>
+                <div id="linechart"></div>
+                <script src="https://unpkg.com/echarts/dist/echarts.min.js"></script>
+                <script src="https://unpkg.com/@chartisan/echarts/dist/chartisan_echarts.js"></script>
+                <script>
+                    const chart = new Chartisan({
+                        el: '#linechart',
+                        url: "@chart('sample_chart')",
+                        hooks: new ChartisanHooks()
+                            .tooltip(true)
+                            .colors('#3498db')
+                            .datasets([{ type: 'line', fill: false }])
+                    });
+                </script>
             </div>
             <div class="bankstatement-summary">
                 <table>
@@ -74,7 +86,7 @@
                         <td>Datum</td>
                         <td>Hoeveelheid</td>
                     </tr>
-                    @foreach ($transacties->take(25) as $transactie)
+                    @foreach ($transacties->take(10) as $transactie)
                         <tr>
                             <td>{{ $transactie->category->name }}</td>
                             <td>{{ $transactie->name }}</td>

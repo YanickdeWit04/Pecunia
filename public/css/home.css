@@ -13,6 +13,7 @@
 body {
     margin: 0%;
     background-color: #EBF1FF;
+    font-family: avenir-regular;
 }
 .main-container {
     display: flex;
@@ -130,6 +131,7 @@ body {
 a{
     text-decoration: none;
     color: black;
+    font-family: avenir-bold;
 }
 .main-content-container{
     display: flex;
@@ -145,6 +147,7 @@ a{
 .right-container{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .total-amount{
     border: solid white;
@@ -172,4 +175,44 @@ a{
 #donutchart{
     width: 280px;
     height: 380px;
+}
+#linechart{
+    border: solid white;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    border-radius: 45px;
+    background-color: white;
+    height: 300px;
+    width: 1150px;
+}
+.bankstatement-summary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid white;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    border-radius: 45px;
+    width: 1150px;
+    height: 270px;
+    background-color: white;
+    margin-top: 25px
+}
+table {
+    border-spacing: 150px 0px;
+}
+#line {
+    width: 3px;
+    background-color: #D9DDE9;
+    color: #D9DDE9;
+    border-radius: 45px;
+    border: 1px solid #D9DDE9;
+    height: 45px;
+}
+#home-button{
+    border-style: solid;
+    border-bottom: thick line;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }

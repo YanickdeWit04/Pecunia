@@ -23,7 +23,14 @@ class HomeBladeController extends Controller
         $transacties = Auth::user()->BankStatements;
         $sum = 0;
         echo $sum;
-        return view('home')->with(['transacties'=>$transacties, 'sum'=>$sum]);
+        $date = Auth::user()->Bankstatements->date;
+        $amount = Auth::user()->Bankstatements->amount;
+        $data[] = ['date'=>$date, 'amount'=>$amount];
+        foreach ($data as $key => $val) {
+            $data[++$key] = [$val->date, (int)$val->amount];
+        }
+        echo $data;
+        return view('home')->with(['transacties'=>$transacties, 'sum'=>$sum, 'data'=>$data]);
     }
 
     /**

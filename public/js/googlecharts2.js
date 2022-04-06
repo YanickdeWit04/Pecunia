@@ -14,7 +14,9 @@ google.charts.setOnLoadCallback(drawChart);
       legend:'none',
       bar: {groupWidth: '10'},
       candlestick: {risingColor: {fill: '#0ECB81', stroke: '#0ECB81'},
-                    hollowisRising: 'true'}
+                    hollowisRising: 'true',
+                    fallingColor: {fill: '#F6465D', stroke: '#F6465D', colors: '#F6465D'}},
+      colors: ['black']
     };
 
     var chart = new google.visualization.CandlestickChart(document.getElementById('chart_div'));
