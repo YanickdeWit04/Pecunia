@@ -16,16 +16,35 @@ body {
     font-size: 40px;
     position: relative;
     top: -20px;
+    border-radius: 50px;
+    border: 10px solid #0d0fe5;
+    padding: 20px;
+    width: 1200px;
+    height: 750px;
+    right: -500px;
 }
 .menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #0a53be;
+    color: #0000ff;
     font-size: 45px;
     position: relative;
     top: -10px;
+
 }
+.smbtn{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size:30px;
+    border-radius:20px;
+    color: white;
+    background-color:blue;
+    right: -300px;
+
+}
+
 .button {
     border: none;
     padding: 15px 32px;
@@ -84,7 +103,7 @@ body {
     align-items: center;
 }
 .dropbtn {
-    background-color: #0a53be;
+    background-color: blue;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -191,11 +210,6 @@ a{
 #donutchart{
     width: 280px;
     height: 380px;
-}
-.sbtn {
-    display: flex;
-    font-size: 20px;
-    background-color:blue;
 }
 
 

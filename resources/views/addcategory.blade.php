@@ -8,25 +8,22 @@
     <link rel="stylesheet" href="/css/addcategory.css">
     <title>Categorie maken</title>
 </head>
- <header>
-     <div class="categorie">
-         <h1>Categorie maken  </h1>
-     </div>
+<header>
+    <div class="categorie">
+        <h1>Categorie maken </h1>
+    </div>
+</header>
 
-
- </header>
 <body>
-
-
 <div class="nobo"><b>
-    <form action="{{route('category.store')}}" method="POST">
-        @csrf
-        <input type="text" name="name" placeholder="name" width="100" height="450" ><br><br>
+        <form action="{{route('category.store')}}" method="POST">
+            @csrf
+            <input class="lll" type="text" name="name" placeholder="name" width="100" height="450"><br><br>
 
-        <input type="text" name="icon" placeholder="icon"><br>
-        <input type="submit">
+            <input class="lll" type="text" name="icon" placeholder="icon"><br>
+            <input type="submit">
 
-    </form>
+        </form>
     </b>
 </div>
 </body>

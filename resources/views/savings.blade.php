@@ -55,7 +55,7 @@
                     <label for="Voor">Sparen voor</label>
                     <input type="text" name="name" ><br><br>
                     <label for="streven">Streefbedrag<input type="number" name="amount"></label><br><br>
-                    <label>Datum om spaardoelen te bereiken<input type="date" name="date" id="date"></label><br><br>
+                    <label>Datum om spaardoelen<br>te bereiken<input type="date" name="date" id="date"></label><br><br>
                     <label for="Begin">Startbedrag <input type="number" name="startbedrag"></label><br><br>
                     <label for="start">Spaarrekening</label>
                     <label for="Rekening 1">Rekening 1</label>
@@ -66,9 +66,10 @@
                     <input type="radio" name="Rekening3"><br><br>
                     <label for="choice">Deposit reminder</label>
                     <input type="checkbox" name="betalingsherrinering"><br><br></b>
+
                 <div class="sbtn">
-                    <button type="reset">Opniew</button>
-                    <button type="submit">Indienen</button>
+                    <button class="smbtn" type="reset">Opniew</button>
+                    <button class="smbtn" type="submit">Indienen</button>
                 </div>
             </form>
         </div>
