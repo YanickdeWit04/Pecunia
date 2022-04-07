@@ -18,7 +18,7 @@ class BankstatementController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
        $amount = $request->amount;
        if (!$amount) {
@@ -26,7 +26,6 @@ class BankstatementController extends Controller
        }
        $transacties = Auth::user()->BankStatements;
        $sum = Bankstatement::sum('amount');
-       echo $sum;
 
 
        return view('expenses')->with(['transacties'=>$transacties, 'amount'=>$amount]);

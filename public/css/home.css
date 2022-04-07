@@ -216,3 +216,7 @@ table {
     border-left: none;
     border-right: none;
 }
+#table-header{
+    color: #3498db;
+    font-family: avenir-bold;
+}

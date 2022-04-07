@@ -52,7 +52,7 @@
                 @if ($sum < 0)
                     <h2 style="display: flex; justify-content: center; color: red;">€ {{ $sum }}</h2>
                 @else
-                    <h2 style="display: flex; justify-content: center;">€ {{ $sum }}</h2>
+                    <h2 style="display: flex; justify-content: center; color: green">€ {{ $sum }}</h2>
                 @endif
             </div>
             <div class="expense-chart">
@@ -72,15 +72,25 @@
                         el: '#linechart',
                         url: "@chart('sample_chart')",
                         hooks: new ChartisanHooks()
+                            .title({
+                                  textAlign: 'center',
+                                  left: '50%',
+                                  text: 'Totaal bedrag per datum',
+                                  textStyle: {
+                                      fontSize: 20,
+                                      fontWeight: 'bold',
+                                      color: '#3498db'
+                                  }
+                              })
                             .tooltip(true)
-                            .colors('#3498db')
-                            .datasets([{ type: 'line', fill: false }])
+                            .datasets([{ lineStyle: { width: 4 }, type: 'line', fill: false, color: '#3498db'},
+                            ]),
                     });
                 </script>
             </div>
             <div class="bankstatement-summary">
                 <table>
-                    <tr>
+                    <tr id="table-header">
                         <td>Categorie</td>
                         <td>Rekening Naam</td>
                         <td>Datum</td>
@@ -91,10 +101,10 @@
                             <td>{{ $transactie->category->name }}</td>
                             <td>{{ $transactie->name }}</td>
                             <td>{{ $transactie->date }}</td>
-                            @if ($transactie->type == 0)
+                            @if ($transactie->amount > 0)
                                 <td style="color:green">+{{ $transactie->amount }}</td>
                             @else
-                                <td style="color:red">-{{ $transactie->amount }}</td>
+                                <td style="color:red">{{ $transactie->amount }}</td>
                             @endif
                         </tr>
                     @endforeach
