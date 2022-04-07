@@ -8,16 +8,22 @@ use Illuminate\Database\Eloquent\Model;
 class Savegoal extends Model
 {
     use HasFactory;
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
+
+
     protected $fillable = [
-        'name',
-        'amount',
-        'icon',
-        'date',
-    ];
+        "name",
+        "spaarenvoor",
+        "amount",
+        "date",
+        "startbedrag",
+        "betalingsherinnering",
+        "spaarrekening",
+        ];
 
 }

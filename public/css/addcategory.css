@@ -4,13 +4,37 @@
 }
 body{
     font-family: avenir-regular;
+    background-color: #ebf1ff;
 }
-.main{
+.nobo{
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    position: relative;
+    top: 300px;
+    border-radius: 65px;
+    border: 10px solid #0d0fe5;
+    padding: 20px;
+    width: 600px;
+    height: 550px;
+    right: -800px;
+
+
 }
-.add-category{
+.add-categorie{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.categorie {
+    position: relative;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color:blue;
+
 }

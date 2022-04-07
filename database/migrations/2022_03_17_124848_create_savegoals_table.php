@@ -21,7 +21,7 @@ class CreateSavegoalsTable extends Migration
             $table->datetime('date');
             $table->float('startbedrag');
             $table->boolean('betalingsherinnering');
-            $table->array('spaarrekening');
+            $table->string('spaarrekening');
             $table->foreignId('users_id');
             $table->timestamps();
         });
