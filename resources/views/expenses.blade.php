@@ -66,6 +66,7 @@
         </tr>
         @foreach($transacties->take($amount) as $transactie)
             <tr>
+            <td>{{$transactie->category->icon}}</td>
             <td>{{$transactie->category->name}}</td>
             <td>{{$transactie->name}}</td>
             <td>{{$transactie->date}}</td>
