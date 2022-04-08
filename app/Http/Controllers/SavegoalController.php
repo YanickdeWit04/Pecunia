@@ -38,6 +38,7 @@ class SavegoalController extends Controller
      */
     public function store(StoreSavegoalRequest $request)
     {
+
         Auth::user()->savegoals()->create($request->all());
         //
 

@@ -15,14 +15,13 @@ class CreateSavegoalsTable extends Migration
     {
         Schema::create('savegoals', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->string('spaarenvoor');
             $table->float('amount');
             $table->datetime('date');
             $table->float('startbedrag');
-            $table->boolean('betalingsherinnering');
+            $table->boolean('betalingsherinnering')->nullable();
             $table->string('spaarrekening');
-            $table->foreignId('users_id');
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }

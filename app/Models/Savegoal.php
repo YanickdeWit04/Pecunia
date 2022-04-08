@@ -17,7 +17,6 @@ class Savegoal extends Model
 
 
     protected $fillable = [
-        "name",
         "spaarenvoor",
         "amount",
         "date",

@@ -16,15 +16,8 @@ class SpaardoelenController extends Controller
     //
     public function store(Request $request)
     {
-        $amount = $request->amount;
-        $name = $request->name;
-        $user = Auth::user()->id;
-        $category_id = (int)$request->category;
-        $type = (boolean)$request->type_of_statement;
-        $date = $request->date;
-        $data = ['amount'=>$amount, 'name'=>$name, 'category_id'=>$category_id, 'type'=>$type,'date'=>$date,'user_id'=>$user];
-        Savegoal::create($data);
-        echo "Spaardoelen opgeslagen!";
+        Auth::user()->savegoals()->create($request->all());
+        return view('spaardoelopgeslagen');
     }
 
     /**
