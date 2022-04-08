@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeBladeController;
+use App\Http\GraphsController;
 use Illuminate\Support\Facades\Route;
 use Monolog\Handler\PushoverHandler;
 
@@ -23,3 +24,4 @@ Route::resource('category', \App\Http\Controllers\CategoryController::class);
 Route::resource('/', \App\Http\Controllers\HomeController::class);
 Auth::routes();
 Route::resource('spaardoelen', \App\Http\Controllers\SpaardoelenController::class);
+Route::resource('/graphs', \App\Http\Controllers\GraphsController::class);

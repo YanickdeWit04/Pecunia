@@ -13,7 +13,8 @@
     <form class="add-category" action="{{route('category.store')}}" method="POST">
         @csrf
         <input type="text" name="name" placeholder="name">
-        <input type="text" name="icon" placeholder="icon">
+        <label for="img">Select image:</label>
+        <input type="file" id="img" name="img" accept="image/*">
         <input type="submit">
     </form>
 </div>
