@@ -78,13 +78,13 @@ body{
 
 
 
- .opgeslaan{
-     white-space: nowrap;
-     overflow: hidden;
-     text-overflow: "----";
-     font-size: 35px;
-     justify-content: center;
-     align-items: center;
-     position: relative;
-     bottom: -150px;
- }
+.opgeslaan{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: "----";
+    font-size: 35px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: -150px;
+}
