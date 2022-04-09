@@ -11,17 +11,15 @@
 <body>
 
 <div class="container">
-    <div class="card">
-        <img class=drr src="images/pecunia.png">
-        <b><h2>Spaarpot</h2></b>
-        <b><p>Behaal jou doelen door te sparen</p></b>
-
+    <div class="card" data-tilt >
+        <img  src="images/pecunia.png" class=drr>
+        <a  class="opgeslaan"><b> Spaardoel opgeslaan</b></a>
         <div class="links">
-            <a href="/spaardoelen"><img src="/images/spaarpot.png"></a>
-            <a href="/graphs"><img src="/images/graphy.png"></a>
-            <a href="/"><img src="/images/home2.jpg"></a>
-
+            <a href="/spaardoelen"><img src="/images/ehh.png"></a>
+            <a href="/graphs"><img src="/images/hrapher.png"></a>
+            <a href="/"><img src="/images/trap.png"></a>
         </div>
+        <a href="/exit" class="btn"><b>Website verlaten</b></a>
 
     </div>
 
@@ -29,5 +27,6 @@
 </div>
 
 
+<script src="js/vanilla-tilt.js"></script>
 </body>
 </html>

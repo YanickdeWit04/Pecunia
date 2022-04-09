@@ -15,15 +15,14 @@ use Monolog\Handler\PushoverHandler;
 |
 */
 Route::resource('/spaardoelen', \App\Http\Controllers\SavegoalController::class)->middleware("auth");
+Route::resource('/so', \App\Http\Controllers\SoController::class);
+Route::resource('/exit', \App\Http\Controllers\ExitController::class);
 Route::resource('/account', \App\Http\Controllers\AccountBladeController::class);
 Route::resource('/instellingen', \App\Http\Controllers\SettingsBladeController::class);
 Route::resource('bankstatement', \App\Http\Controllers\BankstatementController::class, ['except' => 'index']);
 Route::get('/bankstatement/{amount?}', [\App\Http\Controllers\BankstatementController::class, 'index']);
-Route::resource('category', \App\Http\Controllers\CategoryController::class);
+Route::resource('/category', \App\Http\Controllers\CategoryController::class);
 Route::resource('/', \App\Http\Controllers\HomeController::class);
 Auth::routes();
 Route::resource('spaardoelen', \App\Http\Controllers\SpaardoelenController::class);
 
-Route::get('/so', function () {
-    return view('so ');
-});
