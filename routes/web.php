@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeBladeController;
+use App\Http\GraphsController;
 use Illuminate\Support\Facades\Route;
 use Monolog\Handler\PushoverHandler;
 
