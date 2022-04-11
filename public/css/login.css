@@ -1,5 +1,18 @@
+@font-face {
+    font-family: avenir-bold;
+    src: url(../fonts/avenir-bold.otf);
+}
+@font-face {
+    font-family: avenir-light;
+    src: url(../fonts/avenir-lt.otf);
+}
+@font-face {
+    font-family: avenir-regular;
+    src: url(../fonts/avenir-regular.otf);
+}
 body{
-    background-color: #525286;
+    background-color: #EBF1FF;
+    font-family: avenir-regular;
 
 }
 header{
@@ -7,5 +20,10 @@ header{
 }
 
 .app{
-    background-color:  #cbcbd2;
+    background-color:  #EBF1FF;
+}
+.sewo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
