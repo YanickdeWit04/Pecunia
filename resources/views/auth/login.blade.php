@@ -12,7 +12,10 @@
 
 @extends('layouts.app')
 <div class="sewo">
-    <img src="/images/beng.svg"  width="450px" height="450px">
+    <img src="/images/pecunia.png"  width="355px" height="200px" style="
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;">
 </div>
 
 @section('content')
