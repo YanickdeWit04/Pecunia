@@ -11,14 +11,15 @@
 <body>
 
 <div class="container">
-    <div class="card" data-tilt >
-        <img  src="images/pecunia.png" class=drr>
-        <a  class="opgeslaan"><b> Spaardoel opgeslaan</b></a>
+    <div class="card" data-tilt>
+        <img src="images/pecunia.png" class=drr>
+        <a class="opgeslaan"><b> Spaardoel opgeslaan</b></a>
         <div class="links">
             <a href="/spaardoelen"><img src="/images/ehh.png"></a>
             <a href="/graphs"><img src="/images/hrapher.png"></a>
             <a href="/"><img src="/images/trap.png"></a>
         </div>
+
         <a href="/exit" class="btn"><b>Website verlaten</b></a>
 
     </div>

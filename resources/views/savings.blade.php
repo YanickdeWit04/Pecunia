@@ -11,33 +11,56 @@
 <body>
 
 <div class="container">
-    <div class="card" data-tilt >
-    <div class="getir">
-        <img  src="images/pecunia.png" class=drr>
-        <div class action="spaardoelen" method="get">
-            <form action="{{route("spaardoelen.store")}}" method="POST">
-                @csrf <b>
-                    <input name="spaarenvoor" type="hidden"><br>
-                    <label for="Voor">Sparen voor</label>
-                    <input type="text" name="name" ><br><br>
-                    <label for="streven">Streefbedrag<input type="number" name="amount"></label><br><br>
-                    <label>Datum om spaardoelen<br>te bereiken<input type="date" name="date" id="date"></label><br><br>
-                    <label for="Begin">Startbedrag <input type="number" name="startbedrag"></label><br><br>
-                    <label for="start">Spaarrekening</label>
-                    <label for="Rekening 1">Rekening 1</label>
-                    <input type="radio" name="Rekening1">
-                    <label for="Rekening 2">Rekening 2</label>
-                    <input type="radio" name="Rekening2">
-                    <label for="Rekening 3">Rekening 3</label>
-                    <input type="radio" name="Rekening3"><br><br>
-                    <label for="choice">Deposit reminder</label>
-                    <input type="checkbox" name="betalingsherrinering"><br><br></b>
-            </form>
-        </div>
-        </div>
-        </div>
+
+    <div class="card">
+
+        <div class="textincard">
+
+            <img src="images/pecunia.png" class=logo>
+
+            <div class="spaardoelen" action="spaardoelen" method="get">
+                <form action="{{route("spaardoelen.store")}}" method="POST">
+                    @csrf
+
+                    <div class="label">
+                        <label for="Voor">Spaaren voor</label>
+                        <input type="text" name="spaarenvoor">
+                    </div>
+
+                    <div class="label">
+                        <label for="streven">Streefbedrag</label>
+                        <input type="number" name="amount">
+                    </div>
+
+                    <div class="label">
+                        <label>Datum om spaardoelen te bereiken</label>
+                        <input type="date" name="date">
+                    </div>
+
+                    <div class="label">
+                        <label for="Begin">Startbedrag</label>
+                        <input type="amount" name="startbedrag">
+                    </div>
 
 
-<script src="js/vanilla-tilt.js"></script>
+                    <div class="label">
+
+                        <label> Spaarrekening</label>
+                        <input type="rekening1" name="rekening1">
+                    </div>
+
+                    <div class="label">
+                        <label for="choice">Deposit reminder</label>
+                        <input type="checkbox" name="deposit reminder">
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/vanilla-tilt.js"></script>
+</div>
 </body>
 </html>
