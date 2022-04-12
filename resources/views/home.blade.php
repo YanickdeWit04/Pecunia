@@ -14,6 +14,46 @@
 </head>
 
 <body>
+
+<div class="navigation">
+    <ul>
+        <li class="list">
+            <a href="#">
+                <span class="icon"></span>
+                <ion-icon name="home-outline"></ion-icon>
+                <span class="title">Home</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#">
+                <span class="icon"></span>
+                <ion-icon name="wallet-outline"></ion-icon>
+                <span class="title">Spaardoelen</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#">
+                <span class="icon"></span>
+                <ion-icon name="bar-chart-outline"></ion-icon>
+                <span class="title">Graphs</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#">
+                <span class="icon"></span>
+                <ion-icon name="menu-outline"></ion-icon>
+                <span class="title">Category's</span>
+            </a>   <li class="list">
+            <a href="#">
+                <span class="icon"></span>
+                <ion-icon name="log-out-outline"></ion-icon>
+                <span class="title">Uitloggen</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
 <div class="dashboardw">
     <b><h1> Dashboard</h1></b>
 </div>
@@ -88,6 +128,8 @@
             </div>
         </div>
     </div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="js/vanilla-tilt.js"></script>
 </body>
 
