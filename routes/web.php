@@ -27,3 +27,4 @@ Route::resource('/', \App\Http\Controllers\HomeController::class);
 Auth::routes();
 Route::resource('spaardoelen', \App\Http\Controllers\SpaardoelenController::class);
 Route::resource('/graphs', \App\Http\Controllers\GraphsController::class);
+Route::resource('/test', \App\Http\Controllers\TestController::class);
