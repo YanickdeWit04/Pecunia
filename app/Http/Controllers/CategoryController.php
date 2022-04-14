@@ -43,7 +43,7 @@ class CategoryController extends Controller
     public function store(StoreCategoryRequest $request)
     {
         $name = $request->name;
-        $icon = $request->img;
+        $icon = $request->icon;
         $user = Auth::user()->id;
         $data = ['name'=>$name, 'icon'=>$icon, 'user_id'=>$user];
         Category::create($data);
