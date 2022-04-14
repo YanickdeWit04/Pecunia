@@ -22,7 +22,6 @@ class Savegoal extends Model
         "date",
         "startbedrag",
         "betalingsherinnering",
-        "spaarrekening",
         ];
 
 }

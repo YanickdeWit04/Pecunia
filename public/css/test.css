@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.sidebar{
+    position: fixed;
+    width: 240px;
+    left: -240px;
+    height: 100%;
+    background: #1e1e1e;
+    transition: all .5s ease;
+}
+.sidebar header{
+    font-size: 28px;
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    background: #1b1b1b;
+    user-select: none;
