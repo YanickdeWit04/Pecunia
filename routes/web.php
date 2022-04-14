@@ -28,3 +28,4 @@ Auth::routes();
 Route::resource('spaardoelen', \App\Http\Controllers\SpaardoelenController::class);
 Route::resource('/graphs', \App\Http\Controllers\GraphsController::class);
 Route::resource('/test', \App\Http\Controllers\TestController::class);
+Route::resource('spaardoelenopgeslagen', \App\Http\Controllers\SpaardoelenopgeslagenController::class);

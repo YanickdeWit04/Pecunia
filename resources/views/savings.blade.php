@@ -46,12 +46,6 @@
 
 
                         <div class="label">
-
-                            <label> Spaarrekening</label>
-                            <input type="rekening1" name="rekening1">
-                        </div>
-
-                        <div class="label">
                             <label for="choice">Deposit reminder</label>
                             <input class="checky" type="checkbox" name="deposit reminder">
                         </div>
