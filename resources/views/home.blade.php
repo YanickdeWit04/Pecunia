@@ -20,7 +20,7 @@
         <li class="list active">
             <b></b>
             <b></b>
-            <a href="#">
+            <a href="/">
                 <span class="icon"><ion-icon
                         name="home-outline"></ion-icon></span>
                 <span class="title">Home</span>
@@ -29,7 +29,7 @@
         <li class="list">
             <b></b>
             <b></b>
-            <a href="#">
+            <a href="/spaardoelen">
                 <span class="icon"><ion-icon
                         name="wallet-outline"></ion-icon></span>
                 <span class="title">Spaardoelen</span>
@@ -39,20 +39,11 @@
         <li class="list">
             <b></b>
             <b></b>
-            <a href="#">
+            <a href="/category/create">
                 <span class="icon"><ion-icon
                         name="menu-outline"></ion-icon></span>
                 <span class="title">Category's</span>
             </a>
-        <li class="list">
-            <b></b>
-            <b></b>
-            <a href="#">
-                <span class="icon"><ion-icon
-                        name="log-out-outline"></ion-icon></span>
-                <span class="title">Uitloggen</span>
-            </a>
-        </li>
     </ul>
 </div>
 

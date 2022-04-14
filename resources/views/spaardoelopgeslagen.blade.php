@@ -20,8 +20,6 @@
             <a href="/"><img src="/images/trap.png"></a>
         </div>
 
-        <a href="/exit" class="btn"><b>Website verlaten</b></a>
-
     </div>
 
 

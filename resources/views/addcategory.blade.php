@@ -15,13 +15,19 @@
 </header>
 
 <body>
+<div class="container">
+    <div class="card" data-tilt>
 <div class="main">
     <form class="add-category" action="{{route('category.store')}}" method="POST">
         @csrf
-        <input type="text" name="name" placeholder="name">
-        <input type="text" name="icon" placeholder="icon">
-        <input type="submit">
+        <input class="create2" type="text" name="name" placeholder="name">
+        <label for="img">Select image:</label>
+        <input class="create2" type="file" id="img" name="img" accept="image/*">
+        <input class="inputenreset" type="submit" id="submit" name="submit">
+        <input class="inputenreset" type="reset" id="reset" name="reset">
     </form>
+</div>
+    </div>
 </div>
 </body>
 </html>
